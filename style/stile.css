@@ -19,7 +19,7 @@ background:linear-gradient(
 to bottom,
 #000814,
 #001d3d,
-#000b22
+#000814
 );
 
 min-height:100vh;
@@ -318,6 +318,7 @@ display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:70px;
+text-align:center;
 }
 
 .footer-info{
@@ -328,12 +329,14 @@ max-width:250px;
 color:#90e0ef;
 font-size:28px;
 margin-bottom:20px;
+text-align: center;
 }
 
 .footer-info p{
 color:rgb(237, 235, 235);
 line-height:1.8;
 text-decoration: none;
+text-align: center;
 }
 
 .copy{
@@ -346,8 +349,10 @@ color:#90e0ef;
 .footer-info a{
 text-decoration:underline;
 color:rgb(237, 235, 235);
+text-align: center;
 }
 
 .footer-info a:hover{
 color:#90e0ef;
+text-align: center;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
             <a href="#interiores">Planetas</a>
             <a href="#galeria">Galeria</a>
             <a href="#curiosidades">Curiosidad</a>
+            <a href="#formulario">formulario</a>
             <a href="#contacto">Contacto</a>
         </nav>
         </header>
@@ -227,9 +228,62 @@
         </div>
 
     </section>
-    <section class="contenedor-formulario">
-        <input type="nombre" id="nombre" placeholder="escribe tu nombre"
+    <section id="formulario">
+        <div class="contenedor-formulario"> 
+            <h1>Formulario de contacto</h1>
+            <h3>nombre</h3>
+            <input type="text" id="nombre" placeholder="nombre">
+
+            <h3>apellido</h3>
+            <input type="text" id="apellido" placeholder="apellido">
+
+            <h3>contacto</h3>
+            <input type="number" id="contacto" placeholder="+56 9">
+
+            <h3>correo electronico</h3>
+            <input type="email" id="correo" placeholder="@correo">
+
+            <button type="button" onclick="validarFormulario()"> 
+            Enviar formulario 
+            </button>
+        </div>      
     </section>
+    <script>
+        function validarFormulario(){
+            let nombre = document.getElementById("nombre").value;
+            let apellido = document.getElementById("apellido").value;
+            let contacto = document.getElementById("contacto").value;
+            let correo =document.getElementById("correo").value;
+
+            if(nombre.length < 3){ alert("nombre invalido"); return;}
+            if(apellido.length < 3){alert("apellido invalido"); return;}
+            if(contacto.length < 5){alert("contacto invalido"); return;}
+            let validarCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/; 
+            if(validarCorreo.test(correo) == false){ alert("correo invalido"); return;}
+            
+            else{alert("Formulario enviado");}
+
+            let datos = 
+            "Nombre,Apellido,Contacto,Correo\n" +
+            nombre + "," +
+            apellido + "," + 
+            contacto + "," + 
+            correo;
+
+            let archivo = new Blob([datos], { type:"text/csv" });
+
+            let enlace = document.createElement("a");
+
+            enlace.href = URL.createObjectURL(archivo);
+
+            enlace.download = "formulario.csv";
+            
+            enlace.click();
+
+        }   
+
+    </script>
+    
 
     <footer id="contacto">
 

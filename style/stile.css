@@ -18,7 +18,7 @@ background:linear-gradient(
 to bottom,
 #000814,
 #001d3d,
-#000b22
+#000814
 );
 
 min-height:100vh;
@@ -317,7 +317,11 @@ display:flex;
 justify-content:center;
 align-items:flex-start;
 flex-wrap:wrap;
+<<<<<<< HEAD
 gap:80px;
+=======
+gap:70px;
+>>>>>>> 28e63383b18bc14d551106c6bb31952979e3c186
 text-align:center;
 }
 
@@ -330,12 +334,14 @@ text-align:center;
 color:#90e0ef;
 font-size:28px;
 margin-bottom:20px;
+text-align: center;
 }
 
 .footer-info p{
 color:rgb(237, 235, 235);
 line-height:1.8;
 text-decoration: none;
+text-align: center;
 }
 
 .copy{
@@ -348,10 +354,12 @@ color:#90e0ef;
 .footer-info a{
 text-decoration:underline;
 color:rgb(237, 235, 235);
+text-align: center;
 }
 
 .footer-info a:hover{
 color:#90e0ef;
+<<<<<<< HEAD
 }
 
 /* FORMULARIO */
@@ -434,3 +442,7 @@ margin: 0;
 
 input[type=number] {
 appearance: textfield;}
+=======
+text-align: center;
+}
+>>>>>>> 28e63383b18bc14d551106c6bb31952979e3c186

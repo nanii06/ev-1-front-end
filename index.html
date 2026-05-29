@@ -272,14 +272,15 @@
             correo;
 
             let archivo = new Blob([datos], { type:"text/csv" });
-
             let enlace = document.createElement("a");
-
             enlace.href = URL.createObjectURL(archivo);
-
-            enlace.download = "formulario.csv";
-            
+            enlace.download = "Contacto.csv";
             enlace.click();
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("apellido").value = "";
+            document.getElementById("contacto").value = "";
+            document.getElementById("correo").value = "";
         }   
     </script>
     

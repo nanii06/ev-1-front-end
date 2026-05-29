@@ -316,12 +316,15 @@ margin-top:80px;
 .footer-contenido{
 display:flex;
 justify-content:center;
+align-items:flex-start;
 flex-wrap:wrap;
-gap:70px;
+gap:80px;
+text-align:center;
 }
 
 .footer-info{
 max-width:250px;
+text-align:center;
 }
 
 .footer-info h3{
@@ -351,3 +354,4 @@ color:rgb(237, 235, 235);
 .footer-info a:hover{
 color:#90e0ef;
 }
+
